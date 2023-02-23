@@ -14,30 +14,30 @@ const useStyles = createStyles((theme) => ({
     transform: 'translate(-50%, -50%)',
   },
   sector: {
-    fill: theme.colors.dark[6],
-    color: theme.colors.dark[0],
+    fill: 'rgba(32, 32, 32, 0.40)',
+    color: '#fff',
 
     '&:hover': {
-      fill: theme.fn.primaryColor(),
+      fill: 'rgba(60, 111, 160, 0.5)',
       cursor: 'pointer',
       '> g > text, > g > svg > path': {
         fill: '#fff',
       },
     },
     '> g > text': {
-      fill: theme.colors.dark[0],
+      fill: '#fff',
     },
   },
   backgroundCircle: {
-    fill: theme.colors.dark[6],
+    fill: 'rgba(32, 32, 32, 0.40)',
   },
   centerCircle: {
-    fill: theme.fn.primaryColor(),
+    fill: 'rgba(32, 32, 32, 0.40)',
     color: '#fff',
     stroke: theme.colors.dark[6],
     strokeWidth: 4,
     '&:hover': {
-      fill: theme.colors[theme.primaryColor][theme.fn.primaryShade() - 1],
+      fill: 'rgba(60, 111, 160, 0.5)',
       cursor: 'pointer',
     },
   },
@@ -140,13 +140,7 @@ const RadialMenu: React.FC = () => {
             </g>
           </svg>
           <div className={classes.centerIconContainer}>
-            <FontAwesomeIcon
-              icon={!menu.sub ? 'xmark' : 'arrow-rotate-left'}
-              fixedWidth
-              className={classes.centerIcon}
-              color="#fff"
-              size="2x"
-            />
+            <FontAwesomeIcon icon={'xmark'} fixedWidth className={classes.centerIcon} color="#fff" size="2x" />
           </div>
         </ScaleFade>
       </Box>
